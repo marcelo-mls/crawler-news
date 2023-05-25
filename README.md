@@ -19,28 +19,6 @@ Este repositório consiste em um desafio de codificação para a função de Eng
 
 <br />
 
-## Demonstração:
-
-<details>
-  <summary>
-  </summary>
-  
-  - #### Raspando as noticias
-  ![]()
-
-  - #### Site de notícias
-  ![]()
-
-  - #### Inserindo no BigQuery
-  ![]()
-  
-  - #### Consultando a API
-  ![]()
-
-</details>
-
-<br />
-
 ## Credenciais:
 > Na proxíma sessão, você encontrará um passo-a-passo de como testar o projeto, porém, antes, é necessário realizar a seguinte preparação:
 
@@ -112,6 +90,28 @@ Você pode testar a API com softwares como [`Insomnia`](https://insomnia.rest/do
   > A busca pela palavra-chave é feita no título, no subtítulo e no conteúdo das notícias.
   >   
   > Para pesquisar por um termo específico, basta inseri-lo no final da url. Neste exemplo, a palavara-chave buscado foi **Biden**: [`/articles?keywords=biden`](http://127.0.0.1:3001/articles?keywords=biden)
+
+<br />
+
+## Demonstração:
+
+<details>
+  <summary>
+  </summary>
+  
+  1. #### Projeto do BigQuery vazio
+  ![bigquery_vazio](https://github.com/marcelo-mls/crawler-news/assets/102492818/f9df1d25-09e3-4753-8865-ed29de2f3d0f)
+  
+  2. #### Página da [BBC](https://www.bbc.com/news) no momento em que o crawler foi executado
+  ![bbc_news](https://github.com/marcelo-mls/crawler-news/assets/102492818/808e3f57-74bd-4741-8866-730b5e62f662)
+
+  3. #### Crawler rodando e projeto do BigQuery após a execução do Crawler, com a tabela populada.
+  ![crawler](https://github.com/marcelo-mls/crawler-news/assets/102492818/53256025-d455-4333-b68b-02d05e20d04b)
+  
+  4. #### Resultado da API ao buscar pela [notícia que estava em destaque na página da BBC](https://www.bbc.com/news/world-us-canada-65651998)
+  ![API](https://github.com/marcelo-mls/crawler-news/assets/102492818/473099c0-1e78-478e-8027-cb1bd4859629)
+
+</details>
 
 <br />
 
