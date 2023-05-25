@@ -34,3 +34,27 @@ def get_bbc_news_endpoints():
         )
     )
     return filtered_news
+
+
+def get_articles_details(article_selector):
+    news = dict()
+
+    sel = article_selector["selector"]
+    url = article_selector["url"]
+
+    # CSS selectors to extract the details of a BBC article
+    headline = sel.css("h1#main-heading::text").get()
+    author = sel.css("div.ssrcss-68pt20-Text-TextContributorName::text").get()
+    subtitle = sel.css("b.ssrcss-hmf8ql-BoldText::text").get()
+    text = sel.css("article.ssrcss-pv1rh6-ArticleWrapper div.ssrcss-7uxr49-RichTextContainer p.ssrcss-1q0x1qg-Paragraph::text").getall()  # noqa: E501
+    timestamp = sel.css("time[datetime]").xpath("@datetime").get()
+
+    # Adding the extracted data to the dictionary
+    news["url"] = url
+    news["headline"] = headline.strip()
+    news["author"] = author[3:] if author is not None else "not informed"
+    news["subtitle"] = subtitle.strip()
+    news["text"] = " ".join(text).strip()
+    news["timestamp"] = timestamp
+
+    return news
