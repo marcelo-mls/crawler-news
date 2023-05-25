@@ -1,5 +1,6 @@
 import re
 import requests
+import time
 from parsel import Selector
 
 
@@ -58,3 +59,17 @@ def get_articles_details(article_selector):
     news["timestamp"] = timestamp
 
     return news
+
+
+def get_bcc_news(url_list):
+    bbc_news = list()
+
+    for url in url_list:
+        time.sleep(1)
+        selector = get_parsed_selector(url)
+        # Ignore url of pages that don't have articles
+        if "/av/" not in selector["url"]:
+            news = get_articles_details(selector)
+            bbc_news.append(news)
+
+    return bbc_news
