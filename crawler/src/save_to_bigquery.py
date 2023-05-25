@@ -1,3 +1,5 @@
+import google.api_core.exceptions
+import time
 from google.cloud import bigquery
 from google.oauth2 import service_account
 
@@ -18,6 +20,8 @@ def save_to_bigquery(data, dataset_id, table_id):
     try:
         client.create_dataset(dataset)
         print("BigQuery: Dataset created:", dataset_id)
+    except google.api_core.exceptions.Conflict:
+        print("BigQuery: Dataset already exists:", dataset_id)
     except Exception as error:
         print("BigQuery: Error creating dataset:", error)
 
@@ -37,15 +41,24 @@ def save_to_bigquery(data, dataset_id, table_id):
     try:
         table = client.create_table(table, exists_ok=True)
         print("BigQuery: Table created:", table_id)
+    except google.api_core.exceptions.Conflict:
+        print("BigQuery: Table already exists:", table_id)
     except Exception as error:
         print("BigQuery: Error creating table:", error)
 
     # Insert data into the table
-    errors = client.insert_rows_json(table, data)
-
-    if errors:
-        print("BigQuery: Error inserting rows:", errors)
-    else:
-        print("BigQuery: Data inserted into BigQuery")
+    try:
+        # Wait a while after creating the table
+        time.sleep(10)
+        errors = client.insert_rows_json(table, data)
+    except google.api_core.exceptions.NotFound:
+        print("BigQuery: Error inserting rows. Table not found. Trying again")
+        time.sleep(40)
+        errors = client.insert_rows_json(table, data)
+    finally:
+        if errors:
+            print("BigQuery: Error inserting rows:", errors)
+        else:
+            print("BigQuery: Data inserted into BigQuery")
 
     print("BigQuery: Connection closed\n")
