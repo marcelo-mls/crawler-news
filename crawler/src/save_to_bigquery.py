@@ -9,7 +9,6 @@ def save_to_bigquery(data, dataset_id, table_id, credentials_path):
     credentials = service_account.Credentials.from_service_account_file(credentials_path)  # noqa: E501
     client = bigquery.Client(credentials=credentials)
     print("\nBigQuery: Connection established with BigQuery")
-    print("BigQuery: Connection closed\n")
 
     # Create the dataset if it doesn't exist
     dataset_ref = client.dataset(dataset_id)
