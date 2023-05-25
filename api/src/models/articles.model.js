@@ -17,7 +17,7 @@ async function searchArticlesByKeywords(keywords) {
   `;
 
   const [rows] = await bigquery.query(query);
-  console.log(rows)
+
   return rows;
 }
 
