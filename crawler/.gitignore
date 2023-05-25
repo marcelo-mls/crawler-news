@@ -161,4 +161,4 @@ cython_debug/
 
 # Credenciais do BigQuery
 credentials/*
-!credentials/.gitkeep
+sa_gbq_crawler_credentials.json
