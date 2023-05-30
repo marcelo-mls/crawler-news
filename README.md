@@ -20,7 +20,7 @@ Este repositório consiste em um desafio de codificação para a função de Eng
 <br />
 
 ## Credenciais:
-> Na proxíma sessão, você encontrará um passo-a-passo de como testar o projeto, porém, antes, é necessário realizar a seguinte preparação:
+> Na proxíma seção, você encontrará um passo-a-passo de como testar o projeto, porém, antes, é necessário realizar a seguinte preparação:
 
 - Para que tudo funcione corretamente, é necessário ter uma [***Conta de Serviço***](https://cloud.google.com/iam/docs/service-account-overview?hl=pt-br) do `Google Cloud` com as permissões necessárias para leitura e escrita de dados em projeto do `BigQuery`.
 - Tendo a [***Conta de Serviço***](https://cloud.google.com/iam/docs/service-account-overview?hl=pt-br), você pode criar uma [***chave de autenticação***](https://cloud.google.com/iam/docs/keys-create-delete?hl=pt-br), que é um arquivo `.json`, no seguinte formato:
@@ -44,7 +44,7 @@ Este repositório consiste em um desafio de codificação para a função de Eng
 <br />
 
 ## Como Instalar:
-> ⚠️ Para prosseguir, é necessário ter concluído as etapas da sessão **Credenciais**.
+> ⚠️ Para prosseguir, é necessário ter concluído as etapas da seção **Credenciais**.
 
 Estas instruções fornecerão a você uma cópia completa do projeto instalado e funcionando em sua máquina local, para fins de testes e desenvolvimento.
 
