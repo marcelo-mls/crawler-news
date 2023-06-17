@@ -1,8 +1,3 @@
-## Desafio Lima Consulting Group
-> Teste técnico referente à vaga de Engenheiro de Dados na [Lima](https://www.limaconsulting.com/).
-
-<br />
-
 # News Crawler
 
 ## Descrição:
@@ -118,7 +113,7 @@ Você pode testar a API com softwares como [`Insomnia`](https://insomnia.rest/do
 ---
 
 Desenvolvido por [Marcelo Marques](https://www.linkedin.com/in/marcelo-mls/), © 2023.
-
+> Teste técnico referente à vaga de Engenheiro de Dados Pleno na [Lima Consulting Group](https://www.limaconsulting.com/).
 <div>
   <a href = "https://www.linkedin.com/in/marcelo-mls/">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Linkedin" />
