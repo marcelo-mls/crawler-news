@@ -84,7 +84,7 @@ Você pode testar a API com softwares como [`Insomnia`](https://insomnia.rest/do
   > 
   > A busca pela palavra-chave é feita no título, no subtítulo e no conteúdo das notícias.
   >   
-  > Para pesquisar por um termo específico, basta inseri-lo no final da url. Neste link de exemplo, a palavara-chave pesquisada foi **China**: [`/articles?keywords=biden`](http://127.0.0.1:3001/articles?keywords=china)
+  > Para pesquisar por um termo específico, basta inseri-lo no final da url. Neste link de exemplo, a palavara-chave pesquisada foi **China**: [`/articles?keywords=china`](http://127.0.0.1:3001/articles?keywords=china)
 
 <br />
 
