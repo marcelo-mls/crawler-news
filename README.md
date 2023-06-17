@@ -10,7 +10,7 @@ Este repositório consiste em um desafio de codificação para a função de Eng
 - O crawler foi desenvolvido com [`Python`](https://www.python.org/) utilizando as bibliotecas [`requests`](https://pypi.org/project/requests/) e [`parsel`](https://pypi.org/project/parsel/), enquanto para integração com o BigQuery, foram utilizadas as bibliotecas [`google-cloud-bigquery`](https://pypi.org/project/google-cloud-bigquery/) e [`google-auth`](https://pypi.org/project/google-auth/).
 
 - A `API` foi escrita em [`Node.js`](https://nodejs.org/en) com [`Express`](https://expressjs.com/) e [`@google-cloud/bigquery`](https://www.npmjs.com/package/@google-cloud/bigquery) para a parte de integração com o BigQuery.
-> O objetivo de desenvolver a API em outra linguagem e não em python (assim como o crawler), foi para demonstrar habilidades técnicas com uma tecnologia que representa um diferencial nos requisitos da vaga.
+> O objetivo de desenvolver a API em outra linguagem e não em python (assim como o crawler), foi para demonstrar habilidades técnicas, já que este projeto foi desenvolvido para uma oportunidade de Engenharia de Dados, e `Node.js` representava um diferencial nos requisitos da vaga.
 
 <br />
 
