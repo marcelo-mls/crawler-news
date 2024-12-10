@@ -1,4 +1,4 @@
-# News Crawler
+# Crawler News
 
 ## Descrição:
 Este repositório consiste em um desafio de codificação para a função de Engenharia de Dados. Aqui você encontrará uma solução que faz a raspagem dos dados de artigos de um site de notícias, limpa a resposta, armazena no `BigQuery` e os disponibiliza para pesquisa por meio de uma `API`.
